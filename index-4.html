@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Contacts</title>
+		<meta charset="utf-8">
+		<meta name = "format-detection" content = "telephone=no" />
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="css/grid.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/contact-form.css">
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery-migrate-1.2.1.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/TMForm.js"></script>
+		<script src="js/modal.js"></script>
+		<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBtb7fkLB5OPSwF6t1eFWZMyFeKinXRgfM&callback=initMap'></script>
+		<!--<script src='http://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false'></script>-->
+		<!--[if lt IE 8]>
+			<div style=' clear: both; text-align:center; position: relative;'>
+				<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+					<img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+				</a>
+			</div>
+		<![endif]-->
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv.js"></script>
+			<link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+		<![endif]-->
+	</head>
+<body class="index-4">
+<!--==============================header=================================-->
+<header id="header">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108812975-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-108812975-1');
+</script>
+	<div id="stuck_container">
+		<div class="container">
+			<div class="block-1">
+				<div class="row">
+					<div class="grid_12">
+						<nav>
+							<ul class="sf-menu">
+								<li><a href="index.html">Home</a></li><li
+									><a href="index-1.html">About Us</a></li><li
+									><a href="index-2.html">Services</a>
+									</li><li
+									><!--<a href="index-3.html">in-home care</a></li><li class="current"
+									>--><a href="index-4.html">Contacts</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="block-2">
+			<div class="row">
+				<div class="grid_12">
+						<div class="grid_5 alpha">
+							<div class="logotype">
+								<h1>
+									<a href="index.html">
+									<span class="logo"><image src="images/caspian-care-v3-web.gif" alt="Logo" height="163" width="247"></image></span>
+										<span style="font-size:50px">Caspian Care</span>
+										<span class="slogan">in home care support</span>
+									</a>
+								</h1>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<!--=======content================================-->
+
+<section id="content">
+	<div class="container">
+		<div class="block-3">
+			<div class="row">
+				<div class="grid_12">
+					<header>
+						<h2><span>how to find us</span></h2>
+					</header>
+					<div class="content_map">
+						<div class="google-map-api">
+							<div id="map-canvas" class="gmap"></div>
+						</div>
+					</div>
+					<p class="content">Head Office</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="block-4">
+			<div class="row">
+				<div class="grid_12">
+					<header>
+						<h2><span>Contact form</span></h2>
+					</header>
+				</div>
+			</div>
+			<div class="row">
+				<form id="contact-form">
+					<div class="contact-form-loader"></div>
+						<fieldset>
+							<div class="grid_6">
+								<label class="name">
+									<input type="text" name="name" placeholder="Name" value="" data-constraints="@Required @JustLetters" />
+										<span class="empty-message">*This field is required.</span>
+										<span class="error-message">*This is not a valid name.</span>
+								</label>
+								<label class="email">
+									<input type="text" name="email" placeholder="E-mail" value="" data-constraints="@Required @Email" />
+									<span class="empty-message">*This field is required.</span>
+									<span class="error-message">*This is not a valid email.</span>
+								</label>
+								<label class="phone">
+									<input type="text" name="phone" placeholder="Phone" value="" data-constraints="@Required @JustNumbers" />
+									<span class="empty-message">*This field is required.</span>
+									<span class="error-message">*This is not a valid phone.</span>
+								</label>
+							</div>
+							<div class="grid_6">
+								<label class="message">
+									<textarea name="message" placeholder="Comments" data-constraints='@Required @Length(min=20,max=999999)'></textarea>
+									<span class="empty-message">*This field is required.</span>
+									<span class="error-message">*The message is too short.</span>
+								</label>
+							</div>
+							<!-- <label class="recaptcha"><span class="empty-message">*This field is required.</span></label> -->
+						<div class="grid_12">
+							<div class="cont_btn">
+								<a href="#" data-type="submit" class="btn">Send message</a>
+							</div>
+						</div>
+					</fieldset>
+					<div class="modal fade response-message">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+									<h4 class="modal-title">Modal title</h4>
+								</div>
+								<div class="modal-body">
+									You message has been sent! We will be in touch soon.
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--=======footer=================================-->
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="grid_5">
+				<span class="lg">Caspian <br> care</span>
+				<div class="copyright">© <span id="copyright-year"></span> <br> <a href="index-5.html">Privacy Policy</a></div>
+			</div>
+			<div class="grid_3">
+				<h3>contact us</h3>
+				<p><span>Phone:</span><span> +61 (4) 496 936 03 </span></p>
+				<p class="ind-top"><span>email:</span> <a href="mailto:info@caspiancare.com">info@caspiancare.com</a></p>
+			</div>
+			<div class="grid_4">
+				<div class="loc">
+					<h3>location</h3>
+					<p>41 Telopea Street<br> Mount Colah, NSW 2079</p>
+
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<script type="text/javascript">
+          google_api_map_init();
+          function google_api_map_init(){
+            var map;
+            var coordData = new google.maps.LatLng(parseFloat(-33.670699), parseFloat(151.117248,13));
+            var markCoord1 = new google.maps.LatLng(parseFloat(-33.670699), parseFloat(151.117248,13));
+            var marker;
+
+            var markerIcon = {
+                url: "images/gmap_marker.png",
+                size: new google.maps.Size(42, 65),
+                origin: new google.maps.Point(0,0),
+                anchor: new google.maps.Point(21, 70)
+            };
+            function initialize() {
+              var mapOptions = {
+                zoom: 12,
+                center: coordData,
+                scrollwheel: false,
+              }
+
+              var contentString = "<div></div>";
+              var infowindow = new google.maps.InfoWindow({
+                content: contentString,
+                maxWidth: 200
+              });
+
+              var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+              marker = new google.maps.Marker({
+                map:map,
+                position: markCoord1,
+                icon: markerIcon
+              });
+
+
+            google.maps.event.addDomListener(window, 'resize', function() {
+
+              map.setCenter(coordData);
+
+              var center = map.getCenter();
+            });
+          }
+
+            google.maps.event.addDomListener(window, "load", initialize);
+
+          }
+</script>
+</body>
+</html>
